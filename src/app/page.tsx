@@ -95,13 +95,13 @@ export default function Home() {
     : "100%";
 
   return (
-    <main className="flex flex-col gap-16 items-center">
+    <main className="flex flex-col gap-16 items-center max-w-2xl m-auto">
       <header>
         <h1 className="pt-16 uppercase text-4xl font-bold text-blue-700">
           Transformersize
         </h1>
       </header>
-      <aside className="flex-col flex max-w-sm gap-2 w-full sm:flex-row justify-evenly sm:max-w-2xl">
+      <aside className="flex-col flex max-w-sm gap-2 sm:flex-row justify-evenly ">
         <Select
           name="transformer1"
           value={selectedTransformers.transformer1}
@@ -115,7 +115,7 @@ export default function Home() {
           className="bg-red-500 text-gray-100 "
         />
       </aside>
-      <article className="grid gap-2 grid-cols-[1fr_1fr] justify-center w-full max-w-2xl h-96 items-end">
+      <article className="grid gap-2 grid-cols-[1fr_1fr] justify-center w-full items-end">
         <Transformer
           transformer={transformer1}
           height={height1}
@@ -145,7 +145,7 @@ function Transformer({
       style={{
         height,
       }}
-      className={twMerge("relative w-96 text-center pt-4", className)}
+      className={twMerge("relative text-center pt-4", className)}
     >
       {"image" in transformer ? (
         <Image
